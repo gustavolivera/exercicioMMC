@@ -1,0 +1,39 @@
+﻿@model ImcModel;
+@{
+	ViewData["Title"] = "Calcular IMC";
+}
+
+<div class="text-center">
+
+	<h1 class="display-5">Calcular IMC</h1>
+	
+	<form asp-controller="Imc" asp-action="Calcular">
+
+		<div class="col-5 m-auto">
+		<div class="mb-3">
+			<label>Altura</label>
+			<input type="text" name="Altura" asp-for="Altura" class="form-control"/>
+		</div>
+
+		<div class="mb-3">
+			<label>Peso</label>
+			<input type="text" name="Peso" asp-for="Peso" class="form-control"/>
+		</div>
+
+		<div class="mb-3">
+			<label>Valor do IMC</label>
+			<input type="text" name="Valor" asp-for="Valor" class="form-control" readonly="readonly"/>
+		</div>
+
+		<div class="mb-3">
+			<label>Situação</label>
+			<input type="text" name="Situacao" asp-for="Situacao" class="form-control" readonly="readonly"/>
+		</div>
+
+		<div >
+			<button type="submit" class="btn btn-primary">Calcular</button>
+		</div>
+
+		</div>
+	</form>
+</div>
